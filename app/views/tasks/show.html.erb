@@ -4,5 +4,16 @@
     <%= @task.details %>
   </div>
 </div>
+<hr>
+<div>
+  <%= render "shared/checkbox", task: @task %>
+  <span>
+  <% if @task.completed %>
+      This task is completed
+  <% else %>
+    This task is not completed yet
+  <% end %>
+  </span>
+</div>
 
 <%= link_to 'Back to list', tasks_path %>

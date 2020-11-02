@@ -3,7 +3,10 @@
   <% @tasks.each do |task| %>
   <li>
     <%= render "shared/checkbox", task: task %>
-    <span id="task-title"><%= link_to task.title, task_path(task) %></span>
+    <span id="task-title">
+      <%= link_to task.title, task_path(task) %>
+      </span>
+      <span id="trash-icon"><i class="fa fa-trash-alt"></span>
   </li>
   <% end %>
 </ul>

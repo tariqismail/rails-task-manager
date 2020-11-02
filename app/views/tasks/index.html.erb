@@ -13,7 +13,7 @@
       </svg>
     <% end %>
   </span>
-  <span id="task-title"><%= task.title %></span>
+  <span id="task-title"><%= link_to task.title, task_path(task) %></span>
 </li>
   <% end %>
 </ul>

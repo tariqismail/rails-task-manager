@@ -5,8 +5,10 @@
     <%= render "shared/checkbox", task: task %>
     <span id="task-title">
       <%= link_to task.title, task_path(task) %>
+    </span>
+    <span>
+      - <%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
       </span>
-      <span id="trash-icon"><i class="fa fa-trash-alt"></span>
   </li>
   <% end %>
 </ul>

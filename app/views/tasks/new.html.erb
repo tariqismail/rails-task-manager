@@ -1,2 +1,8 @@
 <h1>New task</h1>
-<%= render "shared/task_form", task: @task %>
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.submit %>
+<% end %>
+<hr>
+<%= link_to 'Back to list', tasks_path %>

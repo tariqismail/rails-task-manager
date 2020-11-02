@@ -1,4 +1,10 @@
+<div class="header d-flex justify-content-between">
 <h1><%= @task.title %></h1>
+<!-- <button class="btn btn-outline-info">Edit this task</button> -->
+<%= button_to 'Edit this task', edit_task_path(@task),
+class: "btn btn-outline-info",
+  method: :get %>
+</div>
 <div class="card my-3">
   <div class="card-body">
     <%= @task.details %>
